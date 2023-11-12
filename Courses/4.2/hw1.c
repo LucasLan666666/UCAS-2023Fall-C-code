@@ -7,7 +7,7 @@ int main()
         d = a + ++b + c++;
     printf("a=%d b=%d c=%d d=%d\n", a, b, c, d);
 
-    if (a++ >= 3 || b++ > 2 || c--)
+    if (a++ >= 3 || ++b > 2 || c--)
         d = --a + b-- + c--;
     printf("a=%d b=%d c=%d d=%d\n", a, b, c, d);
 
