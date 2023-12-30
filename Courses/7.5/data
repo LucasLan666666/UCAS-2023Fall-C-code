@@ -1,0 +1,10 @@
+int (*comp)()
+int *f1()
+int (*f2)()
+char **argv
+int (*daytab)[13]
+void *comp()
+void (*comp)()
+char (*(*x())[])()
+char (*(*x[3])())[5]
+int (*pfa[])()

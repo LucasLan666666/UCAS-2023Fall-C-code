@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #define DATANUM 15
 int binsearch(int x, int v[], int n);
 int main(){
