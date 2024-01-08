@@ -15,17 +15,26 @@ int main(){
     return 0;
 }
 
+// int replacePart(int x, int y, int p, int len){
+//     int xc[MAXLENGTH], yc[MAXLENGTH];
+
+//     bin(x, xc);
+//     bin(y, yc);
+
+//     for (int i = 0; i < len; i++){
+//         xc[p - i] = yc[len - 1 - i];
+//     }
+
+//     return back(xc);
+// }
+
 int replacePart(int x, int y, int p, int len){
-    int xc[MAXLENGTH], yc[MAXLENGTH];
-
-    bin(x, xc);
-    bin(y, yc);
-
-    for (int i = 0; i < len; i++){
-        xc[p - i] = yc[len - 1 - i];
-    }
-
-    return back(xc);
+    unsigned int mask = 0;
+    mask = (1 << len) - 1;
+    y = (y & mask) << (p + 1 - len);
+    mask <<= (p + 1 - len);
+    x &= ~mask;
+    return x | y;
 }
 
 void bin(int n, int nb[]){
