@@ -14,14 +14,18 @@ int main(){
     while ((type = getop (s)) != EOF){
         switch (type) {
             case NUMBER:
-                push(atof(s));  break;
+                push(atof(s));
+                break;
             case '+':
-                push(pop() + pop());    break;
+                push(pop() + pop());
+                break;
             case '*':
-                push(pop() * pop());    break;
+                push(pop() * pop());
+                break;
             case '-':
                 op2 = pop();
-                push(pop() - op2);    break;
+                push(pop() - op2);
+                break;
             case '/':
                 op2 = pop();
                 if (op2 != 0.0)
@@ -30,9 +34,11 @@ int main(){
                     printf("error: zero divisor\n");
                 break;
             case '\n':
-               printf("\t%.8g\n", pop());   break;
+                printf("\t%.8g\n", pop());
+                break;
             default:
-              printf("error: unknown command %s\n", s);     break;
+                printf("error: unknown command %s\n", s);
+                break;
         }
     }
     return 0;
